@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/grigory/ontologies/devices-ontology#"
+     xml:base="http://www.semanticweb.org/grigory/ontologies/devices-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:devices-ontology="http://www.semanticweb.org/grigory/ontologies/devices-ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology/2.0.0"/>
+    </owl:Ontology>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // Object Properties
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#connectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#connectedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#reference"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:comment>Соединяется с.</rdfs:comment>
+        <rdfs:label>connectedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#consists -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#consists">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#reference"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:comment>Состоит из.</rdfs:comment>
+        <rdfs:label>consists</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#comprises -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#comprises">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#reference"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:comment>Включает в себя.</rdfs:comment>
+        <rdfs:label>comprises</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#reference -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#reference">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:comment>Связь между концептами.</rdfs:comment>
+        <rdfs:label>reference</rdfs:label>
+    </owl:ObjectProperty>
+  
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#parentFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#parentFor ">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#reference"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:comment>Является родителем.</rdfs:comment>
+        <rdfs:label>parentFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#partOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#reference"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:comment>Является частью.</rdfs:comment>
+        <rdfs:label>partOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#solutionFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#solutionFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Problem"/>
+        <rdfs:comment>Ссылка на решаемую проблему.</rdfs:comment>
+        <rdfs:label>solutionFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // Data properties
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#conceptName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#conceptName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Элемент технической реализации</rdfs:comment>
+        <rdfs:label>conceptName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#patentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#patentName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Именование патента.</rdfs:comment>
+        <rdfs:label>patentName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#patentNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#patentNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Номер патентного документа.</rdfs:comment>
+        <rdfs:label>patentNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#problemName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#problemName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Problem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Проблема-решение.</rdfs:comment>
+        <rdfs:label>problemName</rdfs:label>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#actSAO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#actSAO">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#TechnicalFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>actSaoName</rdfs:label>
+    </owl:DatatypeProperty>
+
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#objectSAO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#objectSAO">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#TechnicalFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>objSaoName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#subjSAO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#subjSAO">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#TechnicalFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>subjSaoName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // Classes
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Component">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:comment>Компонент.</rdfs:comment>
+        <rdfs:label>Component</rdfs:label>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept">
+        <rdfs:comment>Устройство с компонентами представляет собой концепт.</rdfs:comment>
+        <rdfs:label>Concept</rdfs:label>
+    </owl:Class>
+    
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Concept"/>
+        <rdfs:comment>Устройство.</rdfs:comment>
+        <rdfs:label>Device</rdfs:label>
+    </owl:Class>
+
+        
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#TechnicalFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#TechnicalFunction">
+        <rdfs:comment>Техническая функция устройства.</rdfs:comment>
+        <rdfs:label>TechFunction</rdfs:label>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/grigory/ontologies/devices-ontology#Problem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/grigory/ontologies/devices-ontology#Problem">
+        <rdfs:comment>Проблема, решаемая устройством.</rdfs:comment>
+        <rdfs:label>Problem</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
